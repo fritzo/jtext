@@ -1429,7 +1429,7 @@ class SlideBlock (Block):
             self.write(" \\frametitle{")
             write_text(self.write, title.split("#"))
             self.write("}")
-    def open(self):  self.write("%%%%%%%%%%%%%\n\\begin{frame}")
+    def open(self):  self.write("%%%%%%%%%%%%%\n\\begin{frame}[fragile]")
     def close(self): self.write("\\end{frame}\n\n")
     #def blank(self): self.write("\\vspace{1em}\n")
 class UncoverBlock (Block):
